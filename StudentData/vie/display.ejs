@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data display</title>
+<style>
+    .tbl,tr,td,th{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+</head>
+<body>
+    <h2>Data</h2>
+    <table class="tbl">
+        <tr>
+            <th>Roll No </th>
+            <th>First Name </th>
+            <th>Last Name </th>
+            <th>Gender </th>
+            <th>DOB </th>
+            <th>Mobile </th>
+            <th>E-mail </th>
+            <th>Address</th>
+            <th>City </th>
+            <th>PinCode </th>
+            <th>Semester </th>
+            <th>Department </th>
+        </tr>
+        <% data.forEach ( i => { %>
+        <tr>
+            <td><%= i.rollno %></td>
+            <td><%= i.first_name %></td>
+            <td><%= i.last_name %></td>
+            <td><%= i.geneder %></td>
+            <td><%= i.dob %></td>
+            <td><%= i.mobile %></td>
+            <td><%= i.email %></td>
+            <td><%= i.address %></td>
+            <td><%= i.city %></td>
+            <td><%= i.pincode %></td>
+            <td><%= i.sem %></td>
+            <td><%= i.department %></td>
+        </tr>
+        <% }) %>
+    </table>
+    
+</body>
+</html>
