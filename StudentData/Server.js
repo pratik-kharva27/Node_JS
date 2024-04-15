@@ -15,33 +15,19 @@ const conn = mysql.createConnection({
     database:'student'
 });
 conn.connect( (err)=>{
-    if(err){
-        console.log(err);
-    }else{
-        console.log("connection done with dbms");
-    }
+    if(err){console.log(err);}
+    else{console.log("connection done with dbms");}
 })
-
-app.post
-
 app.get( '/',(req,res)=>{
     const sql = 'SELECT * FROM student.student;';
     conn.query(sql,(err,data)=>{
-        if(err){
-            console.log(err);
-        }else{
-            // console.log(data);
-            res.render('display',{data:data});
-        }
+        if(err){console.log(err);}
+        else{res.render('display',{data:data});}
     });
 });
 
 // app.listen(port , ()=> console.log(`server run ${port}`));
 app.listen(port,(err) => {
-    if(err){
-        console.log(err);
-    }
-    else{
-        console.log(`SERVER LISTENES  ${port}`);
-    }
+    if(err){console.log(err);}
+    else{console.log(`SERVER LISTENES  ${port}`);}
 })
