@@ -1,0 +1,10 @@
+express 
+
+for create package file command :- npm init
+
+package name 'expresstut'
+discription 'this is first programm'
+is this ok?(yes)  yes
+
+for install exress command :- npm install express --save
+for uninstall exress command :- npm uninstall express 
